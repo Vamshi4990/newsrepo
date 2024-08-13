@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vamshi news channel</title>
+    <link rel="stylesheet" href="{% static 'css/demo.css'%}">
+  </head>
+  <body>
+     <h1>{{head_msg}}</h1>
+     <ul>
+       <li>{{sub_msg1}}</li>
+       <li>{{sub_msg2}}</li>
+       <li>{{sub_msg3}}</li>
+     </ul>
+     {% if type == 'movies'%}
+     <img src="{% static 'images/tillu.jpeg'%}" alt="loading">
+     <img src="{% static 'images/OG.jpg'%}" alt="loading">
+     <img src="{% static 'images/ashiq3.jpeg'%}" alt="loading">
+     {% elif type == 'sports' %}
+     <img src="{% static 'images/csk.jpg'%}" alt="loading">
+     <img src="{% static 'images/mi.webp'%}" alt="loading">
+     {% elif type == 'political' %}
+     <img src="{% static 'images/csk.jpg'%}" alt="loading">
+     {% endif %}
+
+  </body>
+</html>
